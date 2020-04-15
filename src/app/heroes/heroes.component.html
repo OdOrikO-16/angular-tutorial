@@ -1,4 +1,3 @@
-<!-- cf. pipe -->
 <h2>Heroes</h2>
 <ul class="heroes">
     <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
@@ -6,7 +5,8 @@
     </li>
 </ul>
 
-<div *ngIf="selectedHero">
+<!-- 2.リスト表示-->
+<!-- <div *ngIf="selectedHero">
     <h2>{{selectedHero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{selectedHero.id}}</div>
     <div>
@@ -14,8 +14,9 @@
     <input [(ngModel)]="selectedHero.name" placeholder="name"/>
   </label>
     </div>
-</div>
+</div> -->
 
+<!-- 1.ヒーローエディター-->
 <!-- <h2> {{hero.name | uppercase}} Details</h2>
 <div><span>id: </span>{{hero.id}}</div> -->
 <!-- ngModel → 双方向データバインディング構文 -->
@@ -24,3 +25,6 @@
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
 </div> -->
+
+<!-- 3.リスト表示の内容をhero-detailへ切り分け-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
