@@ -14,7 +14,7 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
 
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
   // heroService プロパティとして定義, HeroService を注入すべき場所として認識
   // コンストラクタでは初期化のみ行う
@@ -29,10 +29,10 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroService: Selected hero id=${hero.id}`);
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroService: Selected hero id=${hero.id}`);
+  // }
 
 
 
