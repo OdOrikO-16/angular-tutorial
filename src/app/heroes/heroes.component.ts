@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -18,7 +17,7 @@ export class HeroesComponent implements OnInit {
 
   // heroService プロパティとして定義, HeroService を注入すべき場所として認識
   // コンストラクタでは初期化のみ行う
-  constructor(private heroService: HeroService, private messageService: MessageService) { }
+  constructor(private heroService: HeroService) { }
 
   // Componentの初期化時に発火
   ngOnInit(): void {
